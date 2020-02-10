@@ -144,6 +144,18 @@ const builds = {
     format: 'cjs',
     external: Object.keys(require('../packages/vue-template-compiler/package.json').dependencies)
   },
+  'template-parser': {
+    entry: resolve('compiler/parser/index.js'),
+    dest: resolve('packages/vue-template-compiler/parser.js'),
+    format: 'cjs',
+    external: Object.keys(require('../packages/vue-template-compiler/package.json').dependencies)
+  },
+  'template-parser-prod': {
+    entry: resolve('compiler/parser/index.js'),
+    dest: resolve('packages/vue-template-compiler/parser.prod.js'),
+    format: 'cjs',
+    external: Object.keys(require('../packages/vue-template-compiler/package.json').dependencies)
+  },
   // Web compiler (UMD for in-browser use).
   'web-compiler-browser': {
     entry: resolve('web/entry-compiler.js'),
